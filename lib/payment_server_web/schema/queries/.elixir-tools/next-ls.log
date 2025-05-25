@@ -1,0 +1,18 @@
+
+00:39:38.239 [info] Loading 174 CA(s) from :otp store
+
+00:39:38.385 id=0 [debug] handled request client -> server initialize in 104ms
+
+00:39:38.391 [debug] sent notification server -> client window/logMessage
+
+00:39:38.394 [debug] NextLS v0.23.3 has initialized!
+
+00:39:38.394 [debug] sent notification server -> client window/logMessage
+
+00:39:38.394 [debug] Log file located at /home/lvn/codes/elixir/learn-elixir/midterm/payment_server/lib/payment_server_web/schema/queries/.elixir-tools/next-ls.log
+
+00:39:38.395 [debug] sent notification server -> client window/logMessage
+
+00:39:38.395 id=2 [debug] sent request server -> client client/registerCapability
+
+00:39:38.395 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}

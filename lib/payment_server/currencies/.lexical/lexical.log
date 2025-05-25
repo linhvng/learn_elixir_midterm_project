@@ -1,0 +1,212 @@
+20:37:45.464 [debug] Child {LoggerFileBackend, :general_log} of Supervisor Logger.Backends.Supervisor started
+Pid: #PID<0.114.0>
+Start Call: Logger.Backends.Watcher.start_link({{LoggerFileBackend, :general_log}, {LoggerFileBackend, :general_log}})
+Restart: :transient
+Shutdown: 5000
+Type: :worker
+20:37:45.464 [info] Child Logger.Backends.Supervisor of Supervisor Logger.Backends.Internal started
+Pid: #PID<0.113.0>
+Start Call: Logger.Backends.Supervisor.start_link([{LoggerFileBackend, :general_log}])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:37:45.464 [info] Child Logger.Backends.Internal of Supervisor Logger.Supervisor started
+Pid: #PID<0.109.0>
+Start Call: Logger.Backends.Internal.start_link([])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:37:45.464 [info] Application logger started at :nonode@nohost
+20:37:46.508 [info] Child :ttb_autostart of Supervisor :runtime_tools_sup started
+Pid: #PID<0.1539.0>
+Start Call: :ttb_autostart.start_link()
+Restart: :temporary
+Shutdown: 3000
+Type: :worker
+20:37:46.508 [info] Application runtime_tools started at :nonode@nohost
+20:37:46.508 [info] Application erts started at :nonode@nohost
+20:37:46.508 [info] Application lx_lexical_shared started at :nonode@nohost
+20:37:46.509 [info] Application lx_lexical_test started at :nonode@nohost
+20:37:46.510 [info] Child LXSnowflake.Generator of Supervisor #PID<0.1542.0> (Supervisor.Default) started
+Pid: #PID<0.1543.0>
+Start Call: LXSnowflake.Generator.start_link(1704070800000, 1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:37:46.510 [info] Application lx_snowflake started at :nonode@nohost
+20:37:46.511 [info] Application lx_sourceror started at :nonode@nohost
+20:37:46.511 [info] Application lx_common started at :nonode@nohost
+20:37:46.511 [info] Application lx_elixir_sense started at :nonode@nohost
+20:37:46.514 [info] Application jason started at :nonode@nohost
+20:37:46.514 [info] Application logger_file_backend started at :nonode@nohost
+20:37:46.514 [info] Application lx_path_glob started at :nonode@nohost
+20:37:46.514 [info] Application lx_proto started at :nonode@nohost
+20:37:46.514 [info] Application lx_protocol started at :nonode@nohost
+20:37:46.534 [info] Child LXical.Document.Store of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1547.0>
+Start Call: LXical.Document.Store.start_link([derive: [analysis: &LXical.Ast.analyze/1]])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:37:46.540 [info] Child LXical.Server of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1548.0>
+Start Call: LXical.Server.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:37:46.540 [info] Child LXical.Server.ProjectSupervisor of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1549.0>
+Start Call: DynamicSupervisor.start_link([name: LXical.Server.ProjectSupervisor, strategy: :one_for_one])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:37:46.540 [info] Child LXical.Server.TaskQueue.State.TaskSupervisor of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1550.0>
+Start Call: Task.Supervisor.start_link([name: LXical.Server.TaskQueue.State.TaskSupervisor])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:37:46.540 [info] Child LXical.Server.TaskQueue of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1551.0>
+Start Call: LXical.Server.TaskQueue.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:37:46.540 [info] Child LXical.Server.Transport.StdIO of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1552.0>
+Start Call: LXical.Server.Transport.StdIO.start_link(:standard_io, &LXical.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:37:46.540 [info] Application lx_server started at :nonode@nohost
+20:37:46.564 [info] Starting project at uri 
+20:37:46.574 [info] Lexical Initialized
+20:37:46.577 [info] opened file:///home/lvn/codes/elixir/learn-elixir/midterm/payment_server/lib/payment_server/currencies/alpha_vantage_client.ex
+20:37:58.618 [error] Shutting down
+20:37:58.618 [warning] Received an Exit notification. Halting the server in 150ms
+20:37:58.619 [debug] Child :timer_server of Supervisor :kernel_sup started
+Pid: #PID<0.1553.0>
+Start Call: :timer.start_link()
+Restart: :permanent
+Shutdown: 1000
+Type: :worker
+20:37:58.622 [error] stdio received :eof, server will stop.
+20:37:58.622 [error] Child LXical.Server.Transport.StdIO of Supervisor LXical.Server.Supervisor terminated
+** (exit) normal
+Pid: #PID<0.1552.0>
+Start Call: LXical.Server.Transport.StdIO.start_link(:standard_io, &LXical.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:37:58.622 [info] Child LXical.Server.Transport.StdIO of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1554.0>
+Start Call: LXical.Server.Transport.StdIO.start_link(:standard_io, &LXical.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:01.640 [debug] Child {LoggerFileBackend, :general_log} of Supervisor Logger.Backends.Supervisor started
+Pid: #PID<0.114.0>
+Start Call: Logger.Backends.Watcher.start_link({{LoggerFileBackend, :general_log}, {LoggerFileBackend, :general_log}})
+Restart: :transient
+Shutdown: 5000
+Type: :worker
+20:38:01.640 [info] Child Logger.Backends.Supervisor of Supervisor Logger.Backends.Internal started
+Pid: #PID<0.113.0>
+Start Call: Logger.Backends.Supervisor.start_link([{LoggerFileBackend, :general_log}])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:38:01.641 [info] Child Logger.Backends.Internal of Supervisor Logger.Supervisor started
+Pid: #PID<0.109.0>
+Start Call: Logger.Backends.Internal.start_link([])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:38:01.641 [info] Application logger started at :nonode@nohost
+20:38:02.661 [info] Child :ttb_autostart of Supervisor :runtime_tools_sup started
+Pid: #PID<0.1539.0>
+Start Call: :ttb_autostart.start_link()
+Restart: :temporary
+Shutdown: 3000
+Type: :worker
+20:38:02.661 [info] Application runtime_tools started at :nonode@nohost
+20:38:02.662 [info] Application erts started at :nonode@nohost
+20:38:02.662 [info] Application lx_lexical_shared started at :nonode@nohost
+20:38:02.662 [info] Application lx_lexical_test started at :nonode@nohost
+20:38:02.664 [info] Child LXSnowflake.Generator of Supervisor #PID<0.1542.0> (Supervisor.Default) started
+Pid: #PID<0.1543.0>
+Start Call: LXSnowflake.Generator.start_link(1704070800000, 1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:02.664 [info] Application lx_snowflake started at :nonode@nohost
+20:38:02.664 [info] Application lx_sourceror started at :nonode@nohost
+20:38:02.664 [info] Application lx_common started at :nonode@nohost
+20:38:02.664 [info] Application lx_elixir_sense started at :nonode@nohost
+20:38:02.667 [info] Application jason started at :nonode@nohost
+20:38:02.667 [info] Application logger_file_backend started at :nonode@nohost
+20:38:02.667 [info] Application lx_path_glob started at :nonode@nohost
+20:38:02.667 [info] Application lx_proto started at :nonode@nohost
+20:38:02.667 [info] Application lx_protocol started at :nonode@nohost
+20:38:02.688 [info] Child LXical.Document.Store of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1547.0>
+Start Call: LXical.Document.Store.start_link([derive: [analysis: &LXical.Ast.analyze/1]])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:02.693 [info] Child LXical.Server of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1548.0>
+Start Call: LXical.Server.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:02.693 [info] Child LXical.Server.ProjectSupervisor of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1549.0>
+Start Call: DynamicSupervisor.start_link([name: LXical.Server.ProjectSupervisor, strategy: :one_for_one])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:38:02.693 [info] Child LXical.Server.TaskQueue.State.TaskSupervisor of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1550.0>
+Start Call: Task.Supervisor.start_link([name: LXical.Server.TaskQueue.State.TaskSupervisor])
+Restart: :permanent
+Shutdown: :infinity
+Type: :supervisor
+20:38:02.693 [info] Child LXical.Server.TaskQueue of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1551.0>
+Start Call: LXical.Server.TaskQueue.start_link([])
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:02.693 [info] Child LXical.Server.Transport.StdIO of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1552.0>
+Start Call: LXical.Server.Transport.StdIO.start_link(:standard_io, &LXical.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:02.693 [info] Application lx_server started at :nonode@nohost
+20:38:02.717 [info] Starting project at uri 
+20:38:02.726 [info] Lexical Initialized
+20:38:02.730 [info] opened file:///home/lvn/codes/elixir/learn-elixir/midterm/payment_server/lib/payment_server/currencies/exchange_rate_monitor.ex
+20:38:14.010 [error] Shutting down
+20:38:14.011 [warning] Received an Exit notification. Halting the server in 150ms
+20:38:14.011 [debug] Child :timer_server of Supervisor :kernel_sup started
+Pid: #PID<0.1553.0>
+Start Call: :timer.start_link()
+Restart: :permanent
+Shutdown: 1000
+Type: :worker
+20:38:14.013 [error] stdio received :eof, server will stop.
+20:38:14.014 [error] Child LXical.Server.Transport.StdIO of Supervisor LXical.Server.Supervisor terminated
+** (exit) normal
+Pid: #PID<0.1552.0>
+Start Call: LXical.Server.Transport.StdIO.start_link(:standard_io, &LXical.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker
+20:38:14.014 [info] Child LXical.Server.Transport.StdIO of Supervisor LXical.Server.Supervisor started
+Pid: #PID<0.1554.0>
+Start Call: LXical.Server.Transport.StdIO.start_link(:standard_io, &LXical.Server.protocol_message/1)
+Restart: :permanent
+Shutdown: 5000
+Type: :worker

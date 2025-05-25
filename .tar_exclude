@@ -1,0 +1,5 @@
+.lexical
+.elixir-tools
+_build
+deps
+data

@@ -9,51 +9,51 @@ Midterm project
 ## wip:
 
 ## done:
--[x] tests must be written for any otp or graphql parts
-  -[x] app code
-    -[x] currencies
-      -[x] read
-      -[x] convert
-      -[x] find_exchange_rate
-    -[x] accounts
-    -[x] wallet
-      -[x] cannot delete default wallet
-      -[x] cannot have two default wallets
-      -[x] find total worth
-      -[x] send money
-  -[.] absinthe graphql
-    -[x] queries
-      -[x] user
-      -[x] wallet
-        -[x] find total worth
-    -[x] mutation
-      -[x] user
-      -[x] wallet
-        -[x] send money
-    -[x] subscription
-      -[x] totalWorthChange
-      -[x] exchangeRateUpdated
-      -[x] exchangeRatesUpdated
--[x] has a database of users with wallets
--[x] wallets have currencies with values
-  -[x] currencies supported should be set in `config/` folder
--[x] user can have multiple wallets
-  -[x] one of those wallets must be a default wallet
-  -[x] cannot have two default wallets
-  -[x] cannot delete default wallet
--[x] can send/receive money
--[x] has an exchange rate monitor
-  -[x] must be process based monitoring
-    -[x] must be able to fetch rates in interval
-    -[x] interval specified in config
-  -[x] can specify how often it updates
-  -[x] rates will be USD base (!IMPORTANT!)
--[x] subscription for exchange rate
-  -[x] per currency
-  -[x] all currencies
--[x] subscription for current total worth in chosen currency
-  -[x] updates when there are changes via send money
--[x] everything should be done over queries, mutations, and subscriptions
+- tests must be written for any otp or graphql parts
+  - app code
+    - currencies
+      - read
+      - convert
+      - find_exchange_rate
+    - accounts
+    - wallet
+      - cannot delete default wallet
+      - cannot have two default wallets
+      - find total worth
+      - send money
+  - absinthe graphql
+    - queries
+      - user
+      - wallet
+        - find total worth
+    - mutation
+      - user
+      - wallet
+        - send money
+    - subscription
+      - totalWorthChange
+      - exchangeRateUpdated
+      - exchangeRatesUpdated
+- has a database of users with wallets
+- wallets have currencies with values
+  - currencies supported should be set in `config/` folder
+- user can have multiple wallets
+  - one of those wallets must be a default wallet
+  - cannot have two default wallets
+  - cannot delete default wallet
+- can send/receive money
+- has an exchange rate monitor
+  - must be process based monitoring
+    - must be able to fetch rates in interval
+    - interval specified in config
+  - can specify how often it updates
+  - rates will be USD base (!IMPORTANT!)
+- subscription for exchange rate
+  - per currency
+  - all currencies
+- subscription for current total worth in chosen currency
+  - updates when there are changes via send money
+- everything should be done over queries, mutations, and subscriptions
 
 # PaymentServer design
 
